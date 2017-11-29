@@ -6,35 +6,29 @@ oy wants to change his profile picture on Facebook. Now Facebook has some restri
 
 
 
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-int l,n,w,h;
-
-scanf("%d",&l);
-printf("\n");
-scanf("%d",&n);
-
-while(n)
-{
-    scanf("%d %d",&w,&h);
-
-    if((w < l)||(h < l))
+   int n,t,i,j;
+   long int k,min,arr[100000];
+   scanf("%d",&t);
+    for(i=0;i<t;i++)
     {
-        printf("UPLOAD ANOTHER \n");
-        } 
-    else if((l <= w)&&(l <= h))
-    {
-    if(w == h)
-        {
-            printf("ACCEPTED \n");
-        }
-        else {
-                printf("CROP IT \n");
+            scanf("%d %ld",&n,&k);
+                for(j=0;j<n;j++)
+                    {
+                        scanf("%ld",&arr[j]);
+                    }
+        min=arr[0];
+        for(j=1;j<n;j++)
+            {
+                if(arr[j]<=min)
+                    min=arr[j];
             }
-        }
-    n--;
-    return 0;
-    }
-
-
+      if(min>=k)         
+        printf("0\n");
+     else
+        printf("%ld\n",k-min);
+    } 
+return 0;
+}
