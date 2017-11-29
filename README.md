@@ -6,6 +6,39 @@ oy wants to change his profile picture on Facebook. Now Facebook has some restri
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #include <stdio.h>
 int main()
 {
